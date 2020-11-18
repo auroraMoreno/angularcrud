@@ -1,0 +1,29 @@
+<h1>Departamentos</h1>
+<div *ngIf="departamentos.length > 0">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Numero</th>
+                <th>Nombre</th>
+                <th>Localidad</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let d of departamentos">
+                <td>{{d.numero}}</td>
+                <td>{{d.nombre}}</td>
+                <td>{{d.localidad}}</td>
+                <td>
+                    <a [routerLink]="['/eliminar',d.numero]" 
+                    class="btn btn-danger">
+                    Eliminar
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-warning" [routerLink]="['/update',d.numero]">Modificar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

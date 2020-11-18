@@ -1,0 +1,28 @@
+<h1>Insertar nuevo departamento</h1>
+<form #insertarForm="ngForm">
+<label>Numero</label>
+<input 
+type="number" 
+class="form-control"
+#cajanumero
+name="cajanumero"
+/>
+<br/>
+<label>Nombre</label>
+<input 
+type="text"
+class="form-control"
+#cajanombre
+name="cajanombre"
+/>
+<br/>
+<label>Localidad</label>
+<input
+type="text"
+class="form-control"
+#cajalocalidad
+name="cajalocalidad"
+/>
+<br/>
+<button class="btn btn-warning" (click)="insertarDepartamento()">Insertar departamento</button>
+</form>
